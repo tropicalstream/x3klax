@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+    <!-- NO CAMERA: paddle is temple-pad swipe only (camera hand tracking removed) -->
+    <!-- NO INTERNET on purpose (field guide §3): commentary is pre-generated offline -->
+
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false" />
+
+    <!-- required to see the firmware SLAM packages from this app -->
+    <queries>
+        <package android:name="com.ffalcon.calibration" />
+        <package android:name="com.rayneo.xr.runtime" />
+    </queries>
+
+    <application
+        android:label="Klax"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+        <!-- registers with RayNeo's launcher as an AR app -->
+        <meta-data android:name="com.rayneo.mercury.app" android:value="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:configChanges="density|orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|keyboard|navigation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.rayneo.intent.category.AR_APP" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

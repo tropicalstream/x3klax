@@ -1,0 +1,34 @@
+# Copy this file to:
+#   tools/fish.config
+#
+# tools/fish.config is ignored by git, so your real API key will not upload.
+
+# Paste your Fish Audio API key here. This is private and must never go in
+# commentary.json.
+FISH_API_KEY=PUT_YOUR_FISH_AUDIO_API_KEY_HERE
+
+# Default Fish voice model/reference id for any commentary line that does not
+# name its own voice_model_id.
+DEFAULT_VOICE_MODEL_ID=PUT_DEFAULT_ANNOUNCER_MODEL_ID_HERE
+
+# Optional named voices. Use these names in commentary.json:
+#   "voice": "announcer"
+#   "voice": "hype"
+#   "voice": "calm"
+#   "voice": "warning"
+#   "voice": "mcp"
+#
+# You can leave unused voices blank, or add more VOICE_<NAME>_MODEL_ID lines.
+VOICE_ANNOUNCER_MODEL_ID=PUT_ANNOUNCER_MODEL_ID_HERE
+VOICE_HYPE_MODEL_ID=PUT_HYPE_MODEL_ID_HERE
+VOICE_CALM_MODEL_ID=PUT_CALM_MODEL_ID_HERE
+VOICE_WARNING_MODEL_ID=PUT_WARNING_MODEL_ID_HERE
+VOICE_MCP_MODEL_ID=PUT_MCP_MODEL_ID_HERE
+
+# The Monopoly Control Protocol itself — used by lines with "voice": "mcp"
+# (cold, corporate, synthetic authority).
+VOICE_MCP_MODEL_ID=PUT_MCP_MODEL_ID_HERE
+
+# THE PADDLE — the hero voice. Speaks level start captions, clear lines,
+# and the finale ("voice": "paddle"). Warm, human, defiant.
+VOICE_PADDLE_MODEL_ID=PUT_PADDLE_MODEL_ID_HERE
