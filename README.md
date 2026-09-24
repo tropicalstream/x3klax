@@ -6,6 +6,13 @@ derived from `x3breakout`, which is GPL v3, so it stays GPL v3.
 Tiles tumble down a conveyor. Catch them on the paddle, drop them into the well,
 make lines of three. Diagonals score most.
 
+## Screenshots
+
+<p>
+  <img src="images/title.png" width="45%" alt="x3klax title screen">
+  <img src="images/gameplay.png" width="45%" alt="x3klax perspective conveyor with a tile and the well">
+</p>
+
 Built on the `x3breakout` chassis: the stereo renderer, neon line batch, vector
 font, temple touchpad, head tracker and music/SFX layer are all inherited. What
 is new here is the game.
